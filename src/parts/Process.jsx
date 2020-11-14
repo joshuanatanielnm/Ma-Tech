@@ -22,7 +22,7 @@ export default function Process() {
             <FirstCard
               number='2'
               title='Mengatur'
-              desc='Kami mengetur struktur belajar, agar kalian tetap bisa belajar secara terstruktur'
+              desc='Kami mengatur struktur belajar, agar kalian tetap bisa belajar secara terstruktur'
             />
             <FirstCard
               number='3'
