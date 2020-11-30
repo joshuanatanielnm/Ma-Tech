@@ -6,6 +6,8 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "postcss": "^8.1.10",
+    "postcss-cli": "^8.3.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-reveal": "^1.2.2",
@@ -17,11 +19,12 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "npm run watch:css && react-scripts start",
+    "build": "npm run build:css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "tailwind:css": "tailwind build src/css/tailwind.src.css -c -o src/css/tailwind.css"
+    "build:css": "postcss src/css/tailwind.css -o src/css/main.css",
+    "watch:css": "postcss src/css/tailwind.css -o src/css/main.css"
   },
   "eslintConfig": {
     "extends": [
